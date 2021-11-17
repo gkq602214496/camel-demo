@@ -1,0 +1,14 @@
+GET http://localhost:80/api/item?id=99
+Accept: application/json
+
+###
+
+GET http://localhost:8080/hsb/v1/trace/component/invoke/info?projectId=1437310073708859394&uniqueIdentifier=1440978811040653313
+Content-Type: application/json
+
+
+
+###
+
+
+

@@ -1,0 +1,45 @@
+POST http://localhost:8098/es/save/get
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+
+
+###
+
+GET http://172.16.111.120:8080/hsb/v1/projects/list?current=1&size=10
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwZXJzb25uZWxfbnVtYmVycyI6IjEwMDA5OCIsImFwcF9tYXJrIjoiTi9BIiwidXNlcl9pZCI6MTQxNjk1OTcwNzkwNTY1MDY4OSwidXNlcl9uYW1lIjoiMTAwMDk4Iiwic2NvcGUiOlsiYWxsIl0sImV4cCI6MTYzNDEyMTI5MSwianRpIjoib1RqbTN6cEtaeEN6RmlZZDZqVFg3cC8vbzdrPSIsImNsaWVudF9pZCI6InVzZXItY2xpZW50IiwibG9naW5fdmVyc2lvbiI6MTQ0ODEwNDAwNzMwMTExNTkwNiwiUHJvdmlkZXIiOiJ6ZHd3LmNkLmFtYyJ9.l-MCwh0RvBpMS6TiPNYP11PUBwWSf-AjJYDUdhOgeD4
+
+
+
+###
+
+GET http://localhost:8080/hsb/v1/trace/request/trend?projectId=1437310073708859394&searchTime=2020-01-01
+Accept: application/json
+
+###
+### SUCCESS ERROR
+
+POST http://localhost:8098/es/save/log
+Content-Type: application/x-www-form-urlencoded
+
+
+{
+  "serviceId": "1437310073708859394",
+  "serviceName": "gkq-ws流程",
+  "nodeAddress": "172.16.110.174",
+  "requestMethod": "ufc",
+  "responseTime" : "2021-09-27T11:59:15.120",
+  "requestTime" : "2021-09-27T11:59:15.081",
+  "costTime": 39,
+  "state": "ERROR",
+  "exceptionMessage": null,
+  "traceType": "PROJECT",
+  "uniqueIdentifier": "130899995691636",
+  "logType": "TEST",
+  "businessDomainName": "HIS",
+  "authenticationCode": "his12345678"
+}
+###
+
+
+
+

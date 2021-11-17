@@ -1,0 +1,33 @@
+POST http://localhost:8098/es/query/overview?appDomain=HIS
+Content-Type: application/json
+
+{}
+###
+
+POST http://localhost:8888/camel/testFallback
+Content-Type: application/json
+
+{}
+
+
+###
+
+GET http://localhost:8098/es/getData
+
+
+{
+"address": "1111111111",
+"name": "wewr"
+}
+###
+
+GET http://localhost:8080/hsb/v1/wsdl/parse/soap/param?wsdl=http://www.webxml.com.cn/WebServices/WeatherWebService.asmx?wsdl
+Content-Type: application/json
+
+{
+"dataQuery": {
+"id": "1111111111",
+"name": "wewr"
+}
+}
+

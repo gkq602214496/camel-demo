@@ -1,0 +1,20 @@
+POST http://localhost:9000/ws/serve
+Content-Type: text/xml; charset=utf-8
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Body>
+<hsb:king222 xmlns:hsb="http://bytecode.hsb.amc.zdww.com/">
+<hsb:message>
+good
+</hsb:message>
+</hsb:king222>
+</soap:Body>
+</soap:Envelope>
+
+###
+
+GET http://localhost:8080/hsb/v1/cxf/wsdl/parse/soap/param?wsdl=http://172.16.110.174:8099/weather?wsdl
+Content-Type: application/json
+
+{}
+

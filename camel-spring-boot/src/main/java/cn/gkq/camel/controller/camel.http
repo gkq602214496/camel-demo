@@ -1,0 +1,13 @@
+GET http://localhost:8088/choice
+Accept: application/json; charset=utf-8
+
+
+
+
+###
+POST http://localhost:8888/camel/testWsClient?name=111
+Accept: text/xml; charset=utf-8
+
+
+
+###

@@ -1,0 +1,10 @@
+GET http://172.16.110.174:9000/hsb/v1/cxf/soap/request/template?wsdlUrl=http://172.16.110.174:9000/send?wsdl&method=getService
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwZXJzb25uZWxfbnVtYmVycyI6IjEwMDAzIiwiYXBwX21hcmsiOiJISVAiLCJ1c2VyX2lkIjoxMzk3NzMzODM3MjUyOTQ3OTcwLCJ1c2VyX25hbWUiOiIxMDAwMyIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2MzAzMjE0MDksImp0aSI6IkoyMG9KRkZWaVhUSFdING9COE5EbzNHS2R2dz0iLCJjbGllbnRfaWQiOiJ1c2VyLWNsaWVudCIsImxvZ2luX3ZlcnNpb24iOjE0MzIyNjc3MjE4NDc5OTIzMjEsIlByb3ZpZGVyIjoiemR3dy5jZC5hbWMifQ.xS-yKEp5t9pdrzGrkVb7mkmzZiurZGouuUX1_y2j22Q
+Content-Type: application/json;charset=UTF-8
+
+{
+"keyId": 2,
+"name": "cornor"
+}
+###
+

@@ -1,0 +1,1 @@
+2021-08-04 17:24:30.209 [http-nio-8098-exec-1] ERROR bboss.org.apache.velocity.runtime.log.AvalonLogChute - Left side ($serviceIdList.size()) of '>' operation has null value at pageServerMonitor[line 12, column 65]

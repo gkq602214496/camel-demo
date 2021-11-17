@@ -1,0 +1,149 @@
+### 新增服务
+POST http://localhost:8096/cxf/get2
+Content-Type: application/json
+
+{
+}
+
+###
+
+POST http://localhost:8096/cxf/raw
+Content-Type: application/json
+
+{
+}
+
+###
+
+
+POST http://localhost:8098/cxf/raw1
+Content-Type: application/json
+
+{
+}
+
+###
+
+POST http://localhost:8091/weather
+Content-Type:  text/xml;charset=utf-8
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <ns2:sendMessageA xmlns:ns2="http://bytecode.hsb.amc.zdww.com/">
+            <name><![CDATA[<sss>ds</sss>]]></name>
+            <age>1</age>
+        </ns2:sendMessageA>
+    </soap:Body>
+</soap:Envelope>
+
+###
+
+
+
+
+
+GET http://localhost:8091/weather
+Content-Type:  application/json
+
+{"name":  "www"}
+
+###
+
+POST http://localhost:9999/dynamicPublish
+Content-Type:  application/json
+
+{"name":  "www"}
+
+###
+
+POST http://localhost:8099/weather
+Content-Type:  text/xml;charset=utf-8
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <ns2:queryWeather xmlns:ns2="http://webservice.gkq.cn/">
+            <arg0><![CDATA[<sss>ds</sss>]]></arg0>
+        </ns2:queryWeather>
+    </soap:Body>
+</soap:Envelope>
+
+###
+
+POST http://localhost:8091/weather
+Content-Type:  application/json
+
+{"name": "hello my world"}
+
+
+
+
+
+
+### 注册字典服务
+POST http://localhost:8088/cxf
+Content-Type: application/json
+
+{
+}
+
+
+### 字典转换测试
+GET http://localhost:8088/dict
+Content-Type: application/json
+
+{
+  "store": {
+    "book": [
+      {
+        "category": "001",
+        "author": "Nigel Rees",
+        "title": "Sayings of the Century",
+        "price": {
+          "gender": [
+            {
+              "name": "001",
+              "sex": "001"
+            },
+            {
+              "name": "002",
+              "sex": "002"
+            },
+            {
+              "name": "003",
+              "sex": "003"
+            }
+          ]
+        }
+      },
+      {
+        "category": "002",
+        "author": "Evelyn Waugh",
+        "title": "Sword of Honour",
+        "price": {
+          "gender": [
+            {
+              "name": "004",
+              "sex": "001"
+            },
+            {
+              "name": "005",
+              "sex": "002"
+            },
+            {
+              "name": "006",
+              "sex": "003"
+            }
+          ]
+        }
+      }
+    ],
+    "bicycle": {
+      "color": "red",
+      "sex": "man",
+      "price": 19.95
+    }
+  },
+  "expensive": 10
+}
+
+###

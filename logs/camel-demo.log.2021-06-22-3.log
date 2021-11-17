@@ -1,0 +1,14 @@
+2021-10-19 11:52:44.753 [main] INFO  cn.gkq.es.WebStartApplication - Starting WebStartApplication on DESKTOP-8GOUE69 with PID 17396 (D:\workspace\camel-demo\camel-es\target\classes started by GKQ in D:\workspace\camel-demo)
+2021-10-19 11:52:44.773 [main] INFO  cn.gkq.es.WebStartApplication - No active profile set, falling back to default profiles: default
+2021-10-19 11:52:45.411 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8098 (http)
+2021-10-19 11:52:45.422 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8098"]
+2021-10-19 11:52:45.431 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-19 11:52:45.432 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-10-19 11:52:45.510 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-19 11:52:45.511 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 702 ms
+2021-10-19 11:52:45.689 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-10-19 11:52:45.802 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8098"]
+2021-10-19 11:52:45.853 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8098 (http) with context path ''
+2021-10-19 11:52:45.856 [main] INFO  cn.gkq.es.WebStartApplication - Started WebStartApplication in 1.44 seconds (JVM running for 2.341)
+2021-10-19 11:52:45.858 [main] INFO  cn.gkq.es.WebStartApplication - camel platform has started up : [] 
+2021-10-19 12:24:20.581 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

@@ -1,0 +1,86 @@
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.gkq.cn/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="WeatherServiceService" targetNamespace="http://webservice.gkq.cn/">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservice.gkq.cn/" elementFormDefault="unqualified" targetNamespace="http://webservice.gkq.cn/" version="1.0">
+            <xs:element name="queryWater" type="tns:queryWater"/>
+            <xs:element name="queryWaterResponse" type="tns:queryWaterResponse"/>
+            <xs:element name="queryWeather" type="tns:queryWeather"/>
+            <xs:element name="queryWeatherResponse" type="tns:queryWeatherResponse"/>
+            <xs:complexType name="queryWater">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="queryWaterResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="tns:necklet"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="necklet">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="city" type="xs:string"/>
+                    <xs:element minOccurs="0" name="id" type="xs:long"/>
+                    <xs:element minOccurs="0" name="name" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="queryWeather">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="queryWeatherResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="tns:necklet"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="queryWater">
+        <wsdl:part element="tns:queryWater" name="parameters"> </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="queryWeatherResponse">
+        <wsdl:part element="tns:queryWeatherResponse" name="parameters"> </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="queryWaterResponse">
+        <wsdl:part element="tns:queryWaterResponse" name="parameters"> </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="queryWeather">
+        <wsdl:part element="tns:queryWeather" name="parameters"> </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="WeatherService">
+        <wsdl:operation name="queryWater">
+            <wsdl:input message="tns:queryWater" name="queryWater"> </wsdl:input>
+            <wsdl:output message="tns:queryWaterResponse" name="queryWaterResponse"> </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="queryWeather">
+            <wsdl:input message="tns:queryWeather" name="queryWeather"> </wsdl:input>
+            <wsdl:output message="tns:queryWeatherResponse" name="queryWeatherResponse"> </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="WeatherServiceServiceSoapBinding" type="tns:WeatherService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="queryWater">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="queryWater">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="queryWaterResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="queryWeather">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="queryWeather">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="queryWeatherResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="WeatherServiceService">
+        <wsdl:port binding="tns:WeatherServiceServiceSoapBinding" name="WeatherServicePort">
+            <soap:address location="http://172.16.110.174:8099/weather"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

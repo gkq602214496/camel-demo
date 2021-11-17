@@ -1,0 +1,47 @@
+server:
+  port: 8888
+greeting: 111
+period: 2000
+okhttp:
+  pool:
+    connect-timeout: 10
+    read-timeout: 10
+    write-timeout: 10
+    retry-on-connection-failure: true
+    max-idle-connections: 16
+    keep-alive-duration: 6
+hystrix:
+  command:
+    default: #default全局有效，service id指定应用有效
+      execution:
+        timeout:
+          #是否开启超时熔断
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000 #断路器超时时间，默认1000ms
+          # hystrix 隔离模式改为信号量模式，feign 才能获取到父线程中的请求头
+          strategy: SEMAPHORE
+          # 允许的并发量，默认值为 10
+          semaphore:
+            maxConcurrentRequests: 100
+feign:
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
+#logging:
+#  config: classpath:log4j2.xml
+#  level:
+#    root: info
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.119.148.27:3306/panda?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: 602214496
+elasticsearch:
+  ip: localhost
+  port: 9200

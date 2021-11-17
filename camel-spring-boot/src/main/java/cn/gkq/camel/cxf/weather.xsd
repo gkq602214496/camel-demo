@@ -1,0 +1,27 @@
+<!--  Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.9-b130926.1035 svn-revision#5f6196f2b90e9460065a4c2f4e30e065b245e51e.  -->
+<xs:schema xmlns:tns="http://impl.webservice.gkq.cn/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://impl.webservice.gkq.cn/">
+    <xs:element name="queryWater" type="tns:queryWater"/>
+    <xs:element name="queryWaterResponse" type="tns:queryWaterResponse"/>
+    <xs:element name="queryWeather" type="tns:queryWeather"/>
+    <xs:element name="queryWeatherResponse" type="tns:queryWeatherResponse"/>
+    <xs:complexType name="queryWeather">
+        <xs:sequence>
+            <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="queryWeatherResponse">
+        <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="queryWater">
+        <xs:sequence>
+            <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="queryWaterResponse">
+        <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

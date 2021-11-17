@@ -1,0 +1,16 @@
+### choice服务
+GET http://localhost:8096/camel/choice
+Content-Type: application/json
+
+{
+}
+
+### choice
+GET http://localhost:8088/choice
+CamelRequestMethod: a
+Content-Type: application/json
+
+{
+"CamelRequestMethod": "a"
+
+}

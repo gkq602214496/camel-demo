@@ -1,0 +1,38 @@
+POST http://localhost:8098/es/save
+Content-Type: application/json
+
+{}
+
+###
+
+POST http://localhost:8098/es/logSave
+Content-Type: application/json
+
+{}
+
+###
+
+POST http://localhost:8098/es/saveServer
+Content-Type: application/json
+
+{}
+
+###
+
+GET http://localhost:8098/es/1406924393748176898
+Content-Type: application/json
+
+
+
+
+
+###
+GET http://localhost:8098/es/server/page
+Content-Type: application/json
+
+{}
+
+###
+GET http://localhost:8098/es/server/info/1406924393748176898
+Content-Type: application/json
+

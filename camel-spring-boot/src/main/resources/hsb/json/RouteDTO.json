@@ -1,0 +1,101 @@
+{
+  "serviceNname": "HTTP查询用户信息服务",
+  "component": [{
+    "id": "http-001",
+    "isFirst": true,
+    "data": {
+      "business": {
+        "name": "http-001监听入口",
+        "description": "http-001监听入口",
+        "type": "http",
+        "mode": "IN_OUT",
+        "retryPolicy": {
+          "maximumRetries": 3,
+          "retryDelay": 500,
+          "discardMessage": false,
+          "maxDelay": 6000000,
+          "mode": "CONSTANT_INTERVAL"
+        },
+        "processingStrategy": {
+          "processingStrategy": "SEQUENTIAL",
+          "threadCount": 1,
+        },
+        "properties": {
+          "hostname": "127.0.0.1",
+          "port": "8099",
+          "resourceUri": "start"
+        },
+        "advancedProperties": {},
+        "variablePassword": false,
+        "state": "STOPPED",
+        "coreThreadSize": 5,
+        "maxThreadSize": 100,
+        "queueSize": 50,
+        "threadKeepAliveTime": 30,
+        "useOwnThreadPool": false,
+        "started": false
+      }
+    }
+  },
+    {
+      "id": "jdbc-002",
+      "isFirst": false,
+      "data": {
+        "business": {
+          "name": "jdbc-002查询用户信息",
+          "description": "jdbc-002查询用户信息",
+          "type": "jdbc",
+          "mode": "OUT_IN",
+          "retryPolicy": {
+            "maximumRetries": 3,
+            "retryDelay": 500,
+            "discardMessage": false,
+            "maxDelay": 6000000,
+            "mode": "CONSTANT_INTERVAL"
+          },
+          "processingStrategy": {
+            "processingStrategy": "SEQUENTIAL",
+            "threadCount": 1,
+            "resourceUri": "start"
+          },
+          "properties": {
+            "datasourceName": "myDataSource",
+            "sql": "SELECT * FROM t_user WHERE username = ",
+          },
+          "advancedProperties": {},
+          "variablePassword": false,
+          "state": "STOPPED",
+          "coreThreadSize": 5,
+          "maxThreadSize": 100,
+          "queueSize": 50,
+          "threadKeepAliveTime": 30,
+          "useOwnThreadPool": false,
+          "started": false
+        }
+      }
+    }
+  ],
+  "links": [{
+    "id": "1",
+    "source": {
+      "cell": "http-001",
+      "port": "output2"
+    },
+    "target": {
+      "cell": "jdbc-002",
+      "port": "in"
+    }
+  },
+    {
+      "id": "2",
+      "source": {
+        "cell": "jdbc-002",
+        "port": "output2"
+      },
+      "target": {
+        "cell": "",
+        "port": "in"
+      }
+    }
+  ]
+}

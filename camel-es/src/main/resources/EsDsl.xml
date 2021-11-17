@@ -1,0 +1,198 @@
+<properties>
+
+    <property name="listProjectInvokeInfo">
+        <![CDATA[
+           {
+	"size": 10,
+	"query": {
+		"bool": {
+			"must": [
+			   {
+					"term": {
+						"serviceId.keyword": "$projectId"
+					}
+				},
+				{
+					"term": {
+						"traceType.keyword": "PROJECT"
+					}
+				}
+			]
+		}
+	}
+}
+        ]]>
+    </property>
+
+    <property name="pageServerMonitor">
+        <![CDATA[
+        {
+            "runtime_mappings": {
+               "valid_message_flow": {
+               "type": "double",
+               "script":
+                   #"""
+                   if (doc['seq'].value == 1) {
+                     emit(doc['messageFlow'].value);
+                   }
+                   """
+               }
+           },
+            "size": 0,
+             "query": {
+                "bool": {
+                    #if($serviceIdList && $serviceIdList.size()>0)
+                        "must": [
+                            {
+                                "terms": {"serverIp.keyword": $serviceIdList}
+                            }
+                        ]
+                    #end
+                 }
+            },
+            "aggs": {
+                "aggs_data": {
+                    "terms": {
+                        "field": "serverIp.keyword"
+                    },
+                    "aggs": {
+                        "total_message_flow": {"sum": {"field": "valid_message_flow"}},
+                        "count_message": {
+                          "cardinality": {"field": "uniqueIdentifier.keyword"}
+                        }
+                    }
+                }
+            }
+          }
+        ]]>
+    </property>
+
+    <property name="pageServiceMonitor">
+        <![CDATA[
+          {
+            "runtime_mappings": {
+               "valid_message_flow": {
+               "type": "double",
+               "script":
+                   #"""
+                   if (doc['seq'].value == 0) {
+                     emit(doc['messageFlow'].value);
+                   }
+                   """
+               }
+            },
+            "size": 0,
+            "query": {
+                "bool": {
+                    "must": [
+                        #if($serviceIdList && $serviceIdList.size()>0)
+                            {
+                                "terms": {"providerId": $serviceIdList}
+                            }
+                        #end
+                    ],
+                    "filter": {
+                        "range": {
+                           "createTime": {
+                              "gte": #[startTime],
+                              "lte": #[endTime]
+                           }
+                        }
+                    }
+                 }
+            },
+            "aggs": {
+                "aggregate_data": {
+                    "terms": {
+                        "field": "providerId.keyword"
+                    },
+                    "aggs": {
+                        "total_flow": {
+                            "sum": {"field": "valid_message_flow"}
+                        },
+                        "total_records": {
+                            "cardinality": {"field": "uniqueIdentifier.keyword"}
+                        },
+                        "error_data": {
+                            "filter": {
+                                "term": {
+                                    "state": "0"
+                                }
+                            },
+                            "aggs": {
+                                "error_records": {
+                                    "cardinality": {"field": "uniqueIdentifier.keyword"}
+                                }
+                            }
+                        },
+                        "error_rate": {
+                             "bucket_script": {
+                                "buckets_path": {
+                                  "all": "total_records",
+                                  "error": "error_data>error_records"
+                                },
+                                "script": "params.error / params.all"
+                             }
+                        }
+                    }
+                }
+            }
+          }
+        ]]>
+    </property>
+
+    <property name="serviceOverview">
+        <![CDATA[
+        {
+            "runtime_mappings": {
+               "valid_message_flow": {
+               "type": "double",
+               "script":
+                   #"""
+                   if (doc['seq'].value == 0) {
+                     emit(doc['messageFlow'].value);
+                   }
+                   """
+               }
+           },
+            "size": 0,
+            "query": {
+                "bool": {
+                    "must": [
+                        {
+                            "term": {"appDomain.keyword": #[appDomain]}
+                        }
+                    ]
+                 }
+            },
+            "aggs": {
+                "total_flow": {
+                     "sum": {
+                         "field": "valid_message_flow"
+                     }
+                 },
+                "total_records": {
+                     "cardinality": {
+                         "field": "uniqueIdentifier.keyword"
+                     }
+                },
+                "error_data": {
+                     "filter": {
+                         "term": {
+                             "state": "0"
+                         }
+                     },
+                    "aggs": {
+                         "error_records": {
+                             "cardinality": {
+                                 "field": "uniqueIdentifier.keyword"}
+                             }
+                         }
+                    }
+               }
+          }
+        ]]>
+    </property>
+
+
+</properties>

@@ -1,0 +1,57 @@
+2021-10-19 11:52:00.952 [main] INFO  cn.gkq.es.WebStartApplication - Starting WebStartApplication on DESKTOP-8GOUE69 with PID 15724 (D:\workspace\camel-demo\camel-es\target\classes started by GKQ in D:\workspace\camel-demo)
+2021-10-19 11:52:00.976 [main] INFO  cn.gkq.es.WebStartApplication - No active profile set, falling back to default profiles: default
+2021-10-19 11:52:01.627 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8098 (http)
+2021-10-19 11:52:01.639 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8098"]
+2021-10-19 11:52:01.646 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-19 11:52:01.647 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-10-19 11:52:01.727 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-19 11:52:01.727 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 721 ms
+2021-10-19 11:52:01.902 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-10-19 11:52:01.942 [main] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'esController' method 
+public java.lang.String cn.gkq.es.controller.EsController.query111() throws java.lang.Exception
+to {POST /es/save/query}: There is already 'esController' bean method
+public java.lang.String cn.gkq.es.controller.EsController.query111222(cn.gkq.es.controller.ProjectInvokeTraceLog) throws java.lang.Exception mapped.
+2021-10-19 11:52:01.942 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-10-19 11:52:01.944 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-10-19 11:52:01.954 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-10-19 11:52:01.959 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'esController' method 
+public java.lang.String cn.gkq.es.controller.EsController.query111() throws java.lang.Exception
+to {POST /es/save/query}: There is already 'esController' bean method
+public java.lang.String cn.gkq.es.controller.EsController.query111222(cn.gkq.es.controller.ProjectInvokeTraceLog) throws java.lang.Exception mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771) ~[spring-beans-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:847) ~[spring-beans-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.13.RELEASE.jar:2.1.13.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) [spring-boot-2.1.13.RELEASE.jar:2.1.13.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) [spring-boot-2.1.13.RELEASE.jar:2.1.13.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) [spring-boot-2.1.13.RELEASE.jar:2.1.13.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.1.13.RELEASE.jar:2.1.13.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204) [spring-boot-2.1.13.RELEASE.jar:2.1.13.RELEASE]
+	at cn.gkq.es.WebStartApplication.main(WebStartApplication.java:22) [classes/:?]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'esController' method 
+public java.lang.String cn.gkq.es.controller.EsController.query111() throws java.lang.Exception
+to {POST /es/save/query}: There is already 'esController' bean method
+public java.lang.String cn.gkq.es.controller.EsController.query111222(cn.gkq.es.controller.ProjectInvokeTraceLog) throws java.lang.Exception mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:619) ~[spring-webmvc-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:587) ~[spring-webmvc-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:313) ~[spring-webmvc-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:283) ~[spring-webmvc-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_221]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:281) ~[spring-webmvc-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:253) ~[spring-webmvc-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:212) ~[spring-webmvc-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:200) ~[spring-webmvc-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:165) ~[spring-webmvc-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1830) ~[spring-beans-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1767) ~[spring-beans-5.1.14.RELEASE.jar:5.1.14.RELEASE]
+	... 16 more

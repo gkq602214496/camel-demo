@@ -1,0 +1,21 @@
+2021-10-19 16:22:34.822 [main] INFO  cn.gkq.es.WebStartApplication - Starting WebStartApplication on DESKTOP-8GOUE69 with PID 9496 (D:\workspace\camel-demo\camel-es\target\classes started by GKQ in D:\workspace\camel-demo)
+2021-10-19 16:22:34.839 [main] INFO  cn.gkq.es.WebStartApplication - No active profile set, falling back to default profiles: default
+2021-10-19 16:22:35.499 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8098 (http)
+2021-10-19 16:22:35.510 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8098"]
+2021-10-19 16:22:35.520 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-19 16:22:35.520 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-10-19 16:22:35.599 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-19 16:22:35.599 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 732 ms
+2021-10-19 16:22:35.773 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-10-19 16:22:35.886 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8098"]
+2021-10-19 16:22:35.938 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8098 (http) with context path ''
+2021-10-19 16:22:35.941 [main] INFO  cn.gkq.es.WebStartApplication - Started WebStartApplication in 1.442 seconds (JVM running for 2.301)
+2021-10-19 16:22:35.943 [main] INFO  cn.gkq.es.WebStartApplication - camel platform has started up : [] 
+2021-10-19 16:37:36.923 [http-nio-8098-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-19 16:37:36.923 [http-nio-8098-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-10-19 16:37:36.928 [http-nio-8098-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2021-10-19 16:37:36.952 [http-nio-8098-exec-1] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/json1;charset=UTF-8' not supported]
+2021-10-19 16:37:38.005 [http-nio-8098-exec-3] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/json1;charset=UTF-8' not supported]
+2021-10-19 16:37:39.022 [http-nio-8098-exec-5] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/json1;charset=UTF-8' not supported]
+2021-10-19 16:37:40.033 [http-nio-8098-exec-6] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/json1;charset=UTF-8' not supported]
+2021-10-19 18:02:43.070 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

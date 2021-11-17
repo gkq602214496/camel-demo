@@ -1,0 +1,17 @@
+2021-11-12 09:25:29.733 [main] INFO  cn.gkq.es.WebStartApplication - Starting WebStartApplication on DESKTOP-8GOUE69 with PID 14132 (D:\workspace\camel-demo\camel-es\target\classes started by GKQ in D:\workspace\camel-demo)
+2021-11-12 09:25:29.751 [main] INFO  cn.gkq.es.WebStartApplication - No active profile set, falling back to default profiles: default
+2021-11-12 09:25:30.473 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8098 (http)
+2021-11-12 09:25:30.485 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8098"]
+2021-11-12 09:25:30.492 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-11-12 09:25:30.492 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-11-12 09:25:30.576 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-11-12 09:25:30.576 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 793 ms
+2021-11-12 09:25:30.764 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-12 09:25:30.892 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8098"]
+2021-11-12 09:25:30.948 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8098 (http) with context path ''
+2021-11-12 09:25:30.950 [main] INFO  cn.gkq.es.WebStartApplication - Started WebStartApplication in 1.621 seconds (JVM running for 2.607)
+2021-11-12 09:25:30.952 [main] INFO  cn.gkq.es.WebStartApplication - camel platform has started up : [] 
+2021-11-12 09:33:07.798 [http-nio-8098-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-12 09:33:07.798 [http-nio-8098-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-11-12 09:33:07.802 [http-nio-8098-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2021-11-12 10:07:27.078 [Thread-6] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

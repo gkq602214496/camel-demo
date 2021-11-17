@@ -1,0 +1,25 @@
+POST http://172.16.110.185:20886/test
+Content-Type: text/xml
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <ns2:queryWeather xmlns:ns2="http://impl.webservice.gkq.cn/">
+            <arg0>beijing</arg0>
+        </ns2:queryWeather>
+    </soap:Body>
+</soap:Envelope>
+###
+
+POST 172.16.110.174:8096/camel/testHttp
+Content-Type: application/json
+
+{
+}
+###
+
+POST http://localhost:20883/test
+Content-Type: application/json
+
+{
+}
+###

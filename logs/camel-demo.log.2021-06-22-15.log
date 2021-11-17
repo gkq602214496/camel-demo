@@ -1,0 +1,14 @@
+2021-11-11 15:24:26.511 [main] INFO  cn.gkq.es.WebStartApplication - Starting WebStartApplication on DESKTOP-8GOUE69 with PID 15276 (D:\workspace\camel-demo\camel-es\target\classes started by GKQ in D:\workspace\camel-demo)
+2021-11-11 15:24:26.530 [main] INFO  cn.gkq.es.WebStartApplication - No active profile set, falling back to default profiles: default
+2021-11-11 15:24:27.194 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8098 (http)
+2021-11-11 15:24:27.205 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8098"]
+2021-11-11 15:24:27.211 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-11-11 15:24:27.212 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-11-11 15:24:27.287 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-11-11 15:24:27.287 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 725 ms
+2021-11-11 15:24:27.459 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-11 15:24:27.574 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8098"]
+2021-11-11 15:24:27.625 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8098 (http) with context path ''
+2021-11-11 15:24:27.628 [main] INFO  cn.gkq.es.WebStartApplication - Started WebStartApplication in 1.432 seconds (JVM running for 2.402)
+2021-11-11 15:24:27.630 [main] INFO  cn.gkq.es.WebStartApplication - camel platform has started up : [] 
+2021-11-11 15:29:19.255 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

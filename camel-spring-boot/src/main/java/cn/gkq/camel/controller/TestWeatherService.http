@@ -1,0 +1,106 @@
+POST http://172.16.110.174:8099/weather
+Content-Type: text/xml; charset=utf-8
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <hsb:getNecklet xmlns:hsb="http://webservice.gkq.cn/">
+            <hsb:person>
+                <id>2</id>
+                <name>张三</name>
+                <address>asia</address>
+                <child>
+                    <id>2</id>
+                    <name>张二娃</name>
+                </child>
+            </hsb:person>
+        </hsb:getNecklet>
+    </soap:Body>
+</soap:Envelope>
+
+
+###
+
+POST http://172.16.110.174:8099/weather
+Content-Type: text/xml; charset=utf-8
+
+<soap:Envelope
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <hsb:queryWater xmlns:hsb="http://webservice.gkq.cn/">
+            <hsb:city>dss</hsb:city>
+        </hsb:queryWater>
+    </soap:Body>
+</soap:Envelope>
+
+
+
+###
+
+POST http://172.16.110.174:8099/weather
+Content-Type: text/xml; charset=utf-8
+
+<soap:Envelope
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <hsb:getListString   xmlns:hsb="http://webservice.gkq.cn/">
+            <hsb:city>dss</hsb:city>
+        </hsb:getListString>
+    </soap:Body>
+</soap:Envelope>
+
+###
+
+POST http://172.16.110.174:8099/weather
+Content-Type: text/xml; charset=utf-8
+
+<soap:Envelope
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <hsb:queryWeather   xmlns:hsb="http://webservice.gkq.cn/">
+            <hsb:city>leshan</hsb:city>
+        </hsb:queryWeather>
+    </soap:Body>
+</soap:Envelope>
+
+
+###
+POST http://172.16.110.174:8099/weather
+Content-Type: text/xml; charset=utf-8
+
+<soap:Envelope
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <hsb:queryWater
+                xmlns:hsb="http://webservice.gkq.cn/">
+            <hsb:city>beijing</hsb:city>
+        </hsb:queryWater>
+    </soap:Body>
+</soap:Envelope>
+
+###
+POST http://ws.webxml.com.cn/WebServices/WeatherWS.asmx?wsdl
+Content-Type: text/xml; charset=utf-8
+
+<soap:Envelope
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <hsb:getSupportCityString
+                xmlns:hsb="http://WebXml.com.cn/">
+            <hsb:theRegionCode>四川</hsb:theRegionCode>
+        </hsb:getSupportCityString>
+    </soap:Body>
+</soap:Envelope>
+
+
+
+
+
+
+
+
+###
+GET http://localhost:8080/hsb/v1/cxf/wsdl/parse/soap/param?wsdl=http://172.16.110.174:8099/weather?wsdl
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwZXJzb25uZWxfbnVtYmVycyI6IjEwMDAzIiwiYXBwX21hcmsiOiJISVAiLCJ1c2VyX2lkIjoxMzk3NzMzODM3MjUyOTQ3OTcwLCJ1c2VyX25hbWUiOiIxMDAwMyIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2MzE2MTU4MjgsImp0aSI6Ikd3dElsb1dxK2lPaUtKczk0OWNoUmFuZHlJbz0iLCJjbGllbnRfaWQiOiJ1c2VyLWNsaWVudCIsImxvZ2luX3ZlcnNpb24iOjE0Mzc2OTY5MDYzODUwMjcwNzQsIlByb3ZpZGVyIjoiemR3dy5jZC5hbWMifQ.PN1CLOMv7muSPFAZ3ctzURRR3DVrO4UVuUz6lL9cKU8
+
+{}
